@@ -1,0 +1,29 @@
+﻿<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Cognome</th>
+            <th scope="col">Indirizzo</th>
+            <th scope="col">Codice Fiscale</th>
+            <th scope="col">Coniugato</th>
+            <th scope="col">N figli</th>
+            <th scope="col">Mansione</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var dipendente in Model)
+        {
+            <tr>
+                <td scope="col">@dipendente.DipendenteId</td>
+                <td scope="col">@dipendente.Nome</td>
+                <td scope="col">@dipendente.Cognome</td>
+                <td scope="col">@dipendente.Indirizzo</td>
+                <td scope="col">@dipendente.CodiceFiscale</td>
+                <td scope="col">@(dipendente.Coniugato ? "si" : "no")</td>
+                <td scope="col">@dipendente.NumFigli</td>
+                <td scope="col">@dipendente.Mansione</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,26 @@
+﻿@model Pagamento
+
+<form asp-controller="Pagamento" asp-action="Add" method="post">
+    <div class="mb-3">
+        <label class="form-label" asp-for="@Model.Periodo"></label>
+        <input type="text" class="form-control" asp-for="@Model.Periodo">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="@Model.Type"></label>
+        <input type="text" class="form-control" asp-for="@Model.Type">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="@Model.Ammontare"></label>
+        <input type="number" class="form-control" asp-for="@Model.Ammontare">
+    </div>
+    <div class="mb-3">
+        <select class="form-select" asp-for="@Model.DipendenteId">
+            <option selected>Open this select menu</option>
+            @foreach(var dipendente in ViewBag.dipendenti)
+            {
+                <option value="@dipendente.DipendenteId">@dipendente.Nome</option>
+            }
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

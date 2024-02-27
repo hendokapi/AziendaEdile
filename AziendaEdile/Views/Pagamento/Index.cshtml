@@ -1,0 +1,23 @@
+﻿<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Periodo</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Ammontare</th>
+            <th scope="col">DipendenteId</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pagamento in Model)
+        {
+            <tr>
+                <td scope="col">@pagamento.PagamentoId</td>
+                <td scope="col">@pagamento.Periodo</td>
+                <td scope="col">@pagamento.Type</td>
+                <td scope="col">@pagamento.Ammontare</td>
+                <td scope="col">@pagamento.DipendenteId</td>
+            </tr>
+        }
+    </tbody>
+</table>

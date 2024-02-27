@@ -1,0 +1,34 @@
+﻿@model Dipendente
+
+<form asp-controller="Dipendente" asp-action="Add" method="post">
+    <div class="mb-3">
+        <label class="form-label" asp-for="@Model.Nome"></label>
+        <input type="text" class="form-control" asp-for="@Model.Nome">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="@Model.Cognome"></label>
+        <input type="text" class="form-control" asp-for="@Model.Cognome">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="@Model.Indirizzo"></label>
+        <input type="text" class="form-control" asp-for="@Model.Indirizzo">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="@Model.CodiceFiscale"></label>
+        <input type="text" class="form-control" asp-for="@Model.CodiceFiscale">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="@Model.NumFigli"></label>
+        <input type="text" class="form-control" asp-for="@Model.NumFigli">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="@Model.Mansione"></label>
+        <input type="text" class="form-control" asp-for="@Model.Mansione">
+    </div>
+    
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" asp-for="@Model.Coniugato">
+        <label class="form-check-label" asp-for="@Model.Coniugato">Coniugato</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Salva</button>
+</form>
